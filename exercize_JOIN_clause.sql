@@ -14,7 +14,7 @@ SELECT user.user_name, lauguage.lauguage
 FROM user
 RIGHT JOIN lauguage on lauguage.lauguage_id = user.fk_lauguage_id;
 
--- without "GROUP by", data of language will be shown only when they are used in user table...
+-- without "GROUP by", data of language will be shown only when they are used in user table.
 -- languages that aren't used in user table wouldn't be shown in a result.
 SELECT lauguage.lauguage, COUNT(user.user_name)
 FROM lauguage
